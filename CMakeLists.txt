@@ -1,34 +1,24 @@
 cmake_minimum_required(VERSION 3.28)
-
-# Define your project															
-project(LangulusMod(((((YourModName))))
+project(LangulusModUMS
     VERSION         1.0.0
-    DESCRIPTION     "((((Description))))"
-    HOMEPAGE_URL    https://((((Webpage))))
+    DESCRIPTION     "Module for managing users and permissions"
+    HOMEPAGE_URL    https://langulus.com
 )
 
-# Automatically gather all cpp files in the source dir							
 file(GLOB_RECURSE
-    LANGULUS_MOD_((((YourModName))))_SOURCES 
+    LANGULUS_MOD_UMS_SOURCES 
     LIST_DIRECTORIES FALSE CONFIGURE_DEPENDS
     source/*.cpp
 )
 
 # Build the module                                                              
-add_library(Langulus((((YourModName)))) SHARED ${LANGULUS_MOD_((((YourModName))))_SOURCES})
+add_library(LangulusModUMS SHARED ${LANGULUS_MOD_UMS_SOURCES})
 
-# Link with the framework														
-target_link_libraries(LangulusMod((((YourModName))))
+target_link_libraries(LangulusModUMS
     PRIVATE     Langulus
 )
 
-# Add test																		
 if(LANGULUS_TESTING)
     enable_testing()
     add_subdirectory(test)
 endif()
-
-# Add demos, if any																
-# You can safely discard this if you don't need demos. Don't forget to delete	
-# the demo folder, too															
-add_subdirectory(demo)

@@ -6,9 +6,20 @@
 /// SPDX-License-Identifier: GPL-3.0-or-later                                 
 ///                                                                           
 #pragma once
-#include <Langulus.hpp>
+#include "Common.hpp"
 
-using namespace Langulus;
 
-// Do you need benchmarking?                                                  
-//#define CATCH_CONFIG_ENABLE_BENCHMARKING
+///                                                                           
+///   User instance                                                           
+///                                                                           
+struct User final : A::User, ProducedFrom<UMS> {
+   LANGULUS(ABSTRACT) false;
+   LANGULUS(PRODUCER) UMS;
+   LANGULUS_BASES(A::User);
+
+public:
+   User(UMS*, const Neat&);
+
+   bool Update(Time);
+   void Refresh();
+};

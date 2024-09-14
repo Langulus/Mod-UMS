@@ -1,31 +1,20 @@
 ///                                                                           
-/// Langulus::Module::((((YourModName))))                                     
-/// Copyright (c) ((((Year)))) ((((YourName)))) ((((YourEmail))))             
-/// Plug-in for the Langulus framework, see https://langulus.com              
+/// Langulus::Module::UMS                                                     
+/// Copyright (c) 2024 Dimo Markov <team@langulus.com>                        
+/// Part of the Langulus framework, see https://langulus.com                  
 ///                                                                           
-/// SPDX-License-Identifier: ((((YourLicense))))                              
+/// SPDX-License-Identifier: GPL-3.0-or-later                                 
 ///                                                                           
 #pragma once
 #include <Langulus.hpp>
-// Include any abstract interfaces provided from Langulus if using any.       
-// Such interfaces are usually available for mods that do the same thing,     
-// like renderers - there's one abstract A::Renderer in                       
-// <Langulus/Graphics.hpp> and multiple modules, like OpenGL, Vulkan and      
-// DirectX, that include it and provide implementations. This allows the      
-// user to simply create A::Renderer without caring what plug-in is actually  
-// currently loaded.                                                          
-// #include <Langulus/((((AbstractModuleIfAny)))).hpp>                        
-// #include <Langulus/((((AbstractUnitIfAny)))).hpp>                          
+#include <Langulus/User.hpp>                        
 #include <Flow/Factory.hpp>
 
 using namespace Langulus;
 
-// Predeclare your types                                                      
-struct ((((ModuleToken))));
-struct ((((UnitToken))));
-struct ProducedBy((((UnitToken))));
+struct UMS;
+struct User;
 
-// For debugging                                                              
 #if 0
    #define VERBOSE_ENABLED() 1
    #define VERBOSE(...)      Logger::Verbose(Self(), __VA_ARGS__)

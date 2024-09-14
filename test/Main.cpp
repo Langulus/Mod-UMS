@@ -1,9 +1,9 @@
 ///                                                                           
-/// Langulus::Module::((((YourModName))))                                     
-/// Copyright (c) ((((Year)))) ((((YourName)))) ((((YourEmail))))             
-/// Plug-in for the Langulus framework, see https://langulus.com              
+/// Langulus::Module::UMS                                                     
+/// Copyright (c) 2024 Dimo Markov <team@langulus.com>                        
+/// Part of the Langulus framework, see https://langulus.com                  
 ///                                                                           
-/// SPDX-License-Identifier: ((((YourLicense))))                              
+/// SPDX-License-Identifier: GPL-3.0-or-later                                 
 ///                                                                           
 #include "Main.hpp"
 

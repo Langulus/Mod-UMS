@@ -6,9 +6,24 @@
 /// SPDX-License-Identifier: GPL-3.0-or-later                                 
 ///                                                                           
 #pragma once
-#include <Langulus.hpp>
+#include "User.hpp"
+#include <Flow/Verbs/Create.hpp>
 
-using namespace Langulus;
 
-// Do you need benchmarking?                                                  
-//#define CATCH_CONFIG_ENABLE_BENCHMARKING
+///                                                                           
+///   User management system module                                           
+///                                                                           
+struct UMS final : A::UserModule {
+   LANGULUS(ABSTRACT) false;
+   LANGULUS_BASES(A::UserModule);
+   LANGULUS_VERBS(Verbs::Create);
+
+private:
+   TFactory<User> mUsers;
+
+public:
+   UMS(Runtime*, const Neat&);
+
+   bool Update(Time);
+   void Create(Verb&);
+};
