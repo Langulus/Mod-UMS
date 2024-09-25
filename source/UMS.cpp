@@ -19,7 +19,7 @@ LANGULUS_DEFINE_MODULE(
 /// Module construction                                                       
 ///   @param runtime - the runtime that owns the module                       
 ///   @param descriptor - instructions for configuring the module             
-UMS::UMS(Runtime* runtime, const Neat& descriptor)
+UMS::UMS(Runtime* runtime, Describe descriptor)
    : Resolvable {this}
    , A::Module  {runtime} {
    VERBOSE("Initializing...");

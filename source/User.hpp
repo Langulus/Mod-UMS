@@ -18,7 +18,7 @@ struct User final : A::User, ProducedFrom<UMS> {
    LANGULUS_BASES(A::User);
 
 public:
-   User(UMS*, const Neat&);
+   User(UMS*, Describe);
 
    bool Update(Time);
    void Refresh();
