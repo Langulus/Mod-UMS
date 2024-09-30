@@ -22,7 +22,7 @@ private:
    TFactory<User> mUsers;
 
 public:
-   UMS(Runtime*, Describe);
+   UMS(Runtime*, const Many&);
 
    bool Update(Time);
    void Create(Verb&);
