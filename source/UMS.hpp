@@ -26,4 +26,5 @@ public:
 
    bool Update(Time);
    void Create(Verb&);
+   void Teardown();
 };

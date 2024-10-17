@@ -26,6 +26,11 @@ UMS::UMS(Runtime* runtime, const Many& descriptor)
    VERBOSE("Initialized");
 }
 
+/// First stage destruction                                                   
+void UMS::Teardown() {
+   mUsers.Teardown();
+}
+
 /// Module update routine                                                     
 ///   @param deltaTime - time between updates                                 
 ///   @return false                                                           
