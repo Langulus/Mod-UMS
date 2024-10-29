@@ -12,11 +12,7 @@ file(GLOB_RECURSE
 )
 
 # Build the module                                                              
-add_library(LangulusModUMS SHARED ${LANGULUS_MOD_UMS_SOURCES})
-
-target_link_libraries(LangulusModUMS
-    PRIVATE     Langulus
-)
+add_langulus_mod(LangulusModUMS ${LANGULUS_MOD_UMS_SOURCES})
 
 if(LANGULUS_TESTING)
     enable_testing()
