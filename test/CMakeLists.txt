@@ -4,19 +4,8 @@ file(GLOB_RECURSE
 	*.cpp
 )
 
-add_executable(LangulusModUMSTest ${LANGULUS_MOD_UMS_TEST_SOURCES})
-
-target_link_libraries(LangulusModUMSTest
-	PRIVATE		Langulus
-				Catch2
-)
-
-add_dependencies(LangulusModUMSTest
-	LangulusModUMS
-)
-
-add_test(
-	NAME		LangulusModUMSTest
-	COMMAND		LangulusModUMSTest
-	WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
+add_langulus_test(LangulusModUMSTest
+	SOURCES			${LANGULUS_MOD_UMS_TEST_SOURCES}
+	LIBRARIES		Langulus
+	DEPENDENCIES    LangulusModUMS
 )
