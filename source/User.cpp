@@ -23,7 +23,7 @@ User::User(UMS* producer, const Many& descriptor)
 /// Update routine                                                            
 ///   @param deltaTime - time between updates                                 
 ///   @return false                                                           
-bool User::Update(Time deltaTime) {
+bool User::Update(Time) {
    return false;
 }
 
