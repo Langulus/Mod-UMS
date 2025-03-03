@@ -7,6 +7,7 @@
 ///                                                                           
 #pragma once
 #include "User.hpp"
+#include <Langulus/Flow/Factory.hpp>
 #include <Langulus/Verbs/Create.hpp>
 
 
