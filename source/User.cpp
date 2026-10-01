@@ -12,7 +12,7 @@
 /// User construction                                                         
 ///   @param producer - the module instance that produced the unit            
 ///   @param descriptor - instructions for configuring the unit               
-User::User(UMS* producer, const Many& descriptor)
+User::User(UMS* producer, Many const& descriptor)
    : Resolvable   {this}
    , ProducedFrom {producer, descriptor} {
    VERBOSE("Initializing...");
