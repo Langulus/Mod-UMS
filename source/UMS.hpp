@@ -15,7 +15,7 @@
 ///   User management system module                                           
 ///                                                                           
 struct UMS final : A::UserModule {
-   LANGULUS(ABSTRACT) false;
+   using CTTI_Abstract = No;
    LANGULUS_BASES(A::UserModule);
    LANGULUS_VERBS(Verbs::Create);
 

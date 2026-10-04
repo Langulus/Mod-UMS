@@ -14,8 +14,8 @@
 ///   User instance                                                           
 ///                                                                           
 struct User final : A::User, ProducedFrom<UMS> {
-   LANGULUS(ABSTRACT) false;
-   LANGULUS(PRODUCER) UMS;
+   using CTTI_Abstract = No;
+   using CTTI_Producer = UMS;
    LANGULUS_BASES(A::User);
 
 public:
