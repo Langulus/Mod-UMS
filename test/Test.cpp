@@ -18,29 +18,29 @@ SCENARIO("Main testing scenario for UMS", "[UMS]") {
          auto root = Thing::Root<false>("UMS");
 
          WHEN("Components created via abstractions (not mandatory)") {
-            auto unit = root.CreateUnit<A::User>();
+            auto part = root.CreateUnit<A::User>();
 
             // Update once                                              
             root.Update({});
             root.DumpHierarchy();
 
-            REQUIRE(unit.GetCount() == 1);
-            REQUIRE(unit.CastsTo<A::User>(1));
-            REQUIRE(unit.IsSparse());
+            REQUIRE(part.GetCount() == 1);
+            REQUIRE(part.CastsTo<A::User>(1));
+            REQUIRE(part.IsSparse());
 
             REQUIRE(root.GetUnits().GetCount() == 1);
          }
 
          WHEN("Components created via tokens (mandatory)") {
-            auto unit = root.CreateUnitToken("A::User");
+            auto part = root.CreateUnitToken("A::User");
 
             // Update once                                              
             root.Update({});
             root.DumpHierarchy();
 
-            REQUIRE(unit.GetCount() == 1);
-            REQUIRE(unit.CastsTo<A::User>(1));
-            REQUIRE(unit.IsSparse());
+            REQUIRE(part.GetCount() == 1);
+            REQUIRE(part.CastsTo<A::User>(1));
+            REQUIRE(part.IsSparse());
 
             REQUIRE(root.GetUnits().GetCount() == 1);
          }

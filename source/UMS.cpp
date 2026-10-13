@@ -40,7 +40,7 @@ bool UMS::Update(Time deltaTime) {
    return false;
 }
 
-/// Create/destroy units in this module instance                              
+/// Create/destroy parts in this module instance                              
 ///   @param verb - the creation/destruction verb                             
 void UMS::Create(Verb& verb) {
    mUsers.Create(this, verb);

@@ -10,8 +10,8 @@
 
 
 /// User construction                                                         
-///   @param producer - the module instance that produced the unit            
-///   @param descriptor - instructions for configuring the unit               
+///   @param producer - the module instance that produced the part            
+///   @param descriptor - instructions for configuring the part               
 User::User(UMS* producer, Many const& descriptor)
    : Resolvable   {this}
    , ProducedFrom {producer, descriptor} {
