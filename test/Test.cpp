@@ -5,7 +5,7 @@
 ///                                                                           
 /// SPDX-License-Identifier: GPL-3.0-or-later                                 
 ///                                                                           
-#include <Langulus/User.hpp>                          
+#include <Langulus/CppAPI/User.hpp>                          
 #include <Langulus/Testing.hpp>                          
 
 
@@ -18,28 +18,28 @@ SCENARIO("Main testing scenario for UMS", "[UMS]") {
          auto root = Thing::Root<false>("UMS");
 
          WHEN("Components created via abstractions (not mandatory)") {
-            auto part = root.CreateUnit<A::User>();
+            auto part = root.CreateUnit<Things::User>();
 
             // Update once                                              
             root.Update({});
             root.DumpHierarchy();
 
             REQUIRE(part.GetCount() == 1);
-            REQUIRE(part.CastsTo<A::User>(1));
+            REQUIRE(part.CastsTo<Things::User>(1));
             REQUIRE(part.IsSparse());
 
             REQUIRE(root.GetUnits().GetCount() == 1);
          }
 
          WHEN("Components created via tokens (mandatory)") {
-            auto part = root.CreateUnitToken("A::User");
+            auto part = root.CreatePartToken("Things::User");
 
             // Update once                                              
             root.Update({});
             root.DumpHierarchy();
 
             REQUIRE(part.GetCount() == 1);
-            REQUIRE(part.CastsTo<A::User>(1));
+            REQUIRE(part.CastsTo<Things::User>(1));
             REQUIRE(part.IsSparse());
 
             REQUIRE(root.GetUnits().GetCount() == 1);

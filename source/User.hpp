@@ -6,17 +6,17 @@
 /// SPDX-License-Identifier: GPL-3.0-or-later                                 
 ///                                                                           
 #pragma once
-#include "Common.hpp"
-#include <Langulus/Flow/Producible.hpp>
+#include "Export.hpp"
+#include <Langulus/Producible.hpp>
 
 
 ///                                                                           
 ///   User instance                                                           
 ///                                                                           
-struct User final : A::User, ProducedFrom<UMS> {
-   using CTTI_Abstract = No;
-   using CTTI_Producer = UMS;
-   LANGULUS_BASES(A::User);
+struct User final : Things::User, ProducedFrom<UMS> {
+   using CTTI_Abstract  = No;
+   using CTTI_Producer  = UMS;
+   using CTTI_Bases     = Things::User;
 
 public:
    User(UMS*, Many const&);
