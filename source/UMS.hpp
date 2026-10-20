@@ -14,9 +14,9 @@
 ///                                                                           
 ///   User management system module                                           
 ///                                                                           
-struct UMS final : A::UserModule {
+struct UMS final : Things::UserModule {
    using CTTI_Abstract = No;
-   LANGULUS_BASES(A::UserModule);
+   LANGULUS_BASES(Things::UserModule);
    LANGULUS_VERBS(Verbs::Create);
 
 private:
