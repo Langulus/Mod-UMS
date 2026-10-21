@@ -20,7 +20,7 @@ LANGULUS_DEFINE_MODULE(
 ///   @param runtime - the runtime that owns the module                       
 ///   @param descriptor - instructions for configuring the module             
 UMS::UMS(Runtime* runtime, Many const&)
-   : Resolvable {this}
+   : Downcastable {this}
    , Things::Module  {runtime} {
    VERBOSE("Initializing...");
    VERBOSE("Initialized");

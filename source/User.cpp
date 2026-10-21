@@ -13,7 +13,7 @@
 ///   @param producer - the module instance that produced the part            
 ///   @param descriptor - instructions for configuring the part               
 User::User(UMS* producer, Many const& descriptor)
-   : Resolvable   {this}
+   : Downcastable   {this}
    , ProducedFrom {producer, descriptor} {
    VERBOSE("Initializing...");
    Couple(descriptor);
