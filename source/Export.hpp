@@ -16,8 +16,8 @@ struct User;
 
 #if 0
    #define VERBOSE_ENABLED() 1
-   #define VERBOSE(...)      Logger::Verbose(Self(), __VA_ARGS__)
-   #define VERBOSE_TAB(...)  const auto tab = Logger::VerboseTab(Self(), __VA_ARGS__)
+   #define VERBOSE(...)      Logger::Verbose(this, __VA_ARGS__)
+   #define VERBOSE_TAB(...)  const auto tab = Logger::VerboseTab(this, __VA_ARGS__)
 #else
    #define VERBOSE_ENABLED() 0
    #define VERBOSE(...)      LANGULUS(NOOP)
