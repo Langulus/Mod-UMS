@@ -13,11 +13,10 @@
 
 ///                                                                           
 ///   User management system module                                           
-///                                                                           
 struct UMS final : Things::UserModule {
-   using CTTI_Abstract = No;
-   LANGULUS_BASES(Things::UserModule);
-   LANGULUS_VERBS(Verbs::Create);
+   using CTTI_Abstract  = No;
+   using CTTI_Bases     = Things::UserModule;
+   using CTTI_Ability   = Verbs::Create;
 
 private:
    TFactory<User> mUsers;
