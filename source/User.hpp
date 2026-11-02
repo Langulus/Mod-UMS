@@ -12,14 +12,13 @@
 
 ///                                                                           
 ///   User instance                                                           
-///                                                                           
 struct User final : Things::User, ProducedFrom<UMS> {
    using CTTI_Abstract  = No;
    using CTTI_Producer  = UMS;
    using CTTI_Bases     = Things::User;
 
 public:
-   User(UMS*, Many const&);
+   User(UMS*, Neat const&);
 
    bool Update(Time);
    void Refresh();

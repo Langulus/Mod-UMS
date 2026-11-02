@@ -10,10 +10,10 @@
 
 
 /// User construction                                                         
-///   @param producer - the module instance that produced the part            
-///   @param descriptor - instructions for configuring the part               
-User::User(UMS* producer, Many const& descriptor)
-   : Downcastable   {this}
+///   @param producer the module instance that produced the part              
+///   @param descriptor instructions for configuring the part                 
+User::User(UMS* producer, Neat const& descriptor)
+   : Downcastable {this}
    , ProducedFrom {producer, descriptor} {
    VERBOSE("Initializing...");
    Couple(descriptor);
@@ -21,7 +21,7 @@ User::User(UMS* producer, Many const& descriptor)
 }
 
 /// Update routine                                                            
-///   @param deltaTime - time between updates                                 
+///   @param deltaTime time between updates                                   
 ///   @return false                                                           
 bool User::Update(Time) {
    return false;

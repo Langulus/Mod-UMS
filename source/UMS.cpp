@@ -17,11 +17,11 @@ LANGULUS_DEFINE_MODULE(
 )
 
 /// Module construction                                                       
-///   @param runtime - the runtime that owns the module                       
-///   @param descriptor - instructions for configuring the module             
-UMS::UMS(Runtime* runtime, Many const&)
+///   @param runtime the runtime that owns the module                         
+///   @param descriptor instructions for configuring the module               
+UMS::UMS(Runtime* runtime, Neat const&)
    : Downcastable {this}
-   , Things::Module  {runtime} {
+   , Module       {runtime} {
    VERBOSE("Initializing...");
    VERBOSE("Initialized");
 }
@@ -32,7 +32,7 @@ void UMS::Teardown() {
 }
 
 /// Module update routine                                                     
-///   @param deltaTime - time between updates                                 
+///   @param deltaTime time between updates                                   
 ///   @return false                                                           
 bool UMS::Update(Time deltaTime) {
    for (auto& user : mUsers)
@@ -41,7 +41,7 @@ bool UMS::Update(Time deltaTime) {
 }
 
 /// Create/destroy parts in this module instance                              
-///   @param verb - the creation/destruction verb                             
+///   @param verb the creation/destruction verb                               
 void UMS::Create(Verb& verb) {
    mUsers.Create(this, verb);
 }
