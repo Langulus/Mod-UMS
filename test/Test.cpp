@@ -28,7 +28,7 @@ SCENARIO("Main testing scenario for UMS", "[UMS]") {
             REQUIRE(part.CastsTo<Things::User>(1));
             REQUIRE(part.IsSparse());
 
-            REQUIRE(root.GetUnits().GetCount() == 1);
+            REQUIRE(root.GetParts().GetCount() == 1);
          }
 
          WHEN("Components created via tokens (mandatory)") {
@@ -42,7 +42,7 @@ SCENARIO("Main testing scenario for UMS", "[UMS]") {
             REQUIRE(part.CastsTo<Things::User>(1));
             REQUIRE(part.IsSparse());
 
-            REQUIRE(root.GetUnits().GetCount() == 1);
+            REQUIRE(root.GetParts().GetCount() == 1);
          }
 
          // Check for memory leaks after each cycle                     
