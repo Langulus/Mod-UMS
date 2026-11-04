@@ -12,7 +12,7 @@
 /// User construction                                                         
 ///   @param producer the module instance that produced the part              
 ///   @param descriptor instructions for configuring the part                 
-User::User(UMS* producer, Neat const& descriptor)
+User::User(UMS const* producer, Neat const& descriptor)
    : Downcastable {this}
    , ProducedFrom {producer, descriptor} {
    VERBOSE("Initializing...");

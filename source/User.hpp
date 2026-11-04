@@ -18,7 +18,7 @@ struct User final : Things::User, ProducedFrom<UMS> {
    using CTTI_Bases     = Things::User;
 
 public:
-   User(UMS*, Neat const&);
+   User(UMS const*, Neat const&);
 
    bool Update(Time);
    void Refresh();
